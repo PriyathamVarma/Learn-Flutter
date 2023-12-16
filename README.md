@@ -4,6 +4,12 @@ Learning Flutter
 
 Flutter is an open-source UI toolkit created by Google. It is used to develop cross-platform applications from a single codebase for Android, iOS, web, and desktop (Windows, macOS, and Linux). Flutter is built on the Dart programming language and uses a declarative programming paradigm.
 
+# **Table of contents**
+
+| S.No | Content | Remarks |
+| - | - | - |
+| 1 | ()[Setup] | Setup Flutter environment |
+
 ## **Key Features of Flutter:**
 
 **Native Performance:** Flutter apps are compiled to native code for each platform, resulting in fast and responsive user experiences.
