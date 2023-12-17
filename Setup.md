@@ -20,10 +20,22 @@ In the file
 export PATH="$PATH:[PATH_OF_FLUTTER_GIT_DIRECTORY]/bin"
 ```
 
+![Path file](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Images/Screenshot%202023-12-17%20at%2000.02.59.png)
 
+``` Ctrl + s ```
+
+Close the terminal
+
+Open it again
+
+``` which flutter ```
+
+You should see the path of the file for Flutter 
 
 2. Git
 3. Android Studio - Used by Flutter SDK - Android
     X Code        - Used for IOS apps
+
+
 
 4. Virtual Devices 
