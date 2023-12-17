@@ -36,6 +36,19 @@ You should see the path of the file for Flutter
 3. Android Studio - Used by Flutter SDK - Android
     X Code        - Used for IOS apps
 
+Follow the instructions in downloading
 
+In the terminal 
+
+```
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+```
+
+Then 
+
+```
+sudo xcodebuild -license
+
+```
 
 4. Virtual Devices 
