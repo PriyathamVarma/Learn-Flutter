@@ -52,3 +52,7 @@ sudo xcodebuild -license
 ```
 
 4. Virtual Devices 
+
+## Useful Resources
+
+1. [Flutter setup instructions](https://docs.flutter.dev/get-started/install/macos)
