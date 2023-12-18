@@ -20,7 +20,7 @@ void main(){
 
 var name = myName();
 
-print ('My name is $name');
+print ('My name is ${name}');
 
 }
 
@@ -29,3 +29,8 @@ String myName(){
 return "Varma";
 
 }
+
+- Every value has a type
+- Every variable has a type it can refer to
+- Once a variable type is associated it cant be changed
+
