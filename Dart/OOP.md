@@ -33,37 +33,29 @@ Dart supports OOP principles through the use of classes, objects, constructors, 
 ## Example
 
 ``` dart
-class Account {
-  String accountNumber;
-  double balance;
 
-  Account(this.accountNumber, this.balance);
+void main(){
 
-  void deposit(double amount) {
-    if (amount > 0) {
-      balance += amount;
-    } else {
-      throw new Exception('Cannot deposit negative amount');
-    }
-  }
+  var person = new Person();
 
-  void withdraw(double amount) {
-    if (balance >= amount) {
-      balance -= amount;
-    } else {
-      throw new Exception('Insufficient funds');
-    }
-  }
+  person.firstName = "Varma is a hero";
 
-  double getBalance() {
-    return balance;
-  }
+  person.printName();
+
+}
+
+class Person{
+
+String firstName="Default: First Name";
+
+printName(){
+  print(firstName);
+}
+
 }
 
 
 ```
-
-This class defines a simple bank account with properties accountNumber and balance. It also defines methods for depositing and withdrawing money from the account.
 
 ## Benefits of OOP in Dart
 
@@ -78,3 +70,32 @@ This class defines a simple bank account with properties accountNumber and balan
 ## Conclusion
 
 OOP is a powerful and versatile programming paradigm that can be used to write maintainable, reusable, and efficient code in Dart. By understanding the key concepts of OOP and learning how to implement OOP principles in Dart, developers can create more robust and scalable applications.
+
+## Constructor
+
+```dart
+void main(){
+
+  var person = new Person("Varma");
+
+  //person.firstName = "Varma is a hero";
+
+  person.printName();
+
+}
+
+class Person{
+
+String firstName="Default: First Name";
+
+// Constructor
+Person(name){
+  firstName = name;
+}
+
+printName(){
+  print(firstName);
+}
+
+}
+```
