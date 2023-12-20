@@ -51,6 +51,16 @@ sudo xcodebuild -license
 
 ```
 
+To create a flutter project
+
+```bash
+
+flutter create <app-name>
+
+```
+
+
+
 4. Virtual Devices 
 
 ## Useful Resources
