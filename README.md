@@ -1,3 +1,13 @@
+```
+Project: Learn-Flutter
+Author : Vatsavaye Priyatham Varma
+License: Free
+Date   : 14/12/2023
+Summary: This project is for learning how to create Flutter apps. Dart programming will also be included in the project.
+Contact: priyatham002@gmail.com
+
+```
+
 # Learn-Flutter
 Learning Flutter
 
