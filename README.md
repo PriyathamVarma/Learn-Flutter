@@ -19,8 +19,8 @@ Flutter is an open-source UI toolkit created by Google. It is used to develop cr
 | S.No | Content | Remarks |
 | - | - | - |
 | 1 | [Setup](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Setup.md) | Setup Flutter environment |
-| 2 | [Dart](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Setup.md) | Setup Flutter environment |
-| 3 | [](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Setup.md) | Setup Flutter environment |
+| 2 | [Dart](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Setup.md) | Dart Programming |
+| 3 | [Dice game](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Setup.md) | Dice game in Flutter |
 
 ## **Key Features of Flutter:**
 
