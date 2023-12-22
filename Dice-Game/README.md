@@ -311,6 +311,28 @@ void main() {
 }
 ```
 
+![Hello world screenshot](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Images/Simulator%20Screenshot%20-%20Dice%20Test%20-%202023-12-22%20at%2017.53.35.png)
+
+**Improving code**
+
+- Use const for better performance
+
+```dart
+runApp(const MaterialApp(home: Text('Hello World')));
+```
+
+- Now, use scaffold widget **Scaffold()** to give a good background for the app
+
+```dart
+ runApp(const MaterialApp(home: Scaffold(body: Text('Hello World'))));
+```
+
+This will give a better UI look and apperance
+
+![Screenshot after scaffold widget](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Images/Screenshot%202023-12-22%20at%2018.13.30.png)
+
+- Now, to make the text come to the center, use **layout** widgets.
+
 
 
 ## Resources
