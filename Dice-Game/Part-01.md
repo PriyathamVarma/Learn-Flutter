@@ -1,5 +1,5 @@
-[<- README](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/README.md) | 
-[Part 02: Classes, Custom Widgets ->](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-02.md)
+[<- README](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/README.md) | 
+[Part 02: Classes, Custom Widgets ->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-02.md)
 
 **Starting from scratch**
 
@@ -81,5 +81,5 @@ This will give a better UI look and apperance
 
 - Now, to make the text come to the center, use **layout** widgets.
 
-[<- README](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/README.md) | 
-[Part 02: Classes, Custom Widgets ->](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-02.md)
+[<- README](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/README.md) | 
+[Part 02: Classes, Custom Widgets ->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-02.md)
