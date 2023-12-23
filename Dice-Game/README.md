@@ -257,8 +257,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 | S.No | Link | Remarks |
 |- | - | -|
-| 1 | [Part 01](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-01.md) | Basic widgets and heirarchy |
-| 2 | [Part 01](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-02.md) | Classes and custom widgets |
+| 1 | [Part 01](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-01.md) | Basic widgets and heirarchy |
+| 2 | [Part 01](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-02.md) | Classes and custom widgets |
 
 
 
