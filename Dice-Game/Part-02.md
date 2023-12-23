@@ -1,5 +1,5 @@
-[<- Part 01: Basic Widgets](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-01.md) |
-[Part 03: Variables, Functions ->](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-03.md)
+[<- Part 01: Basic Widgets](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-01.md) |
+[Part 03: Variables, Functions ->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-03.md)
 
 ## Container
 
@@ -252,6 +252,6 @@ class CustomBoxContainer extends StatelessWidget {
 }
 ```
 
-[<- Part 01: Basic Widgets](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-01.md) |
-[Part 03: Variables, Functions ->](https://github.com/PriyathamVarma/Learn-Flutter/new/main/Dice-Game/Part-03.md)
+[<- Part 01: Basic Widgets](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-01.md) |
+[Part 03: Variables, Functions ->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dice-Game/Part-03.md)
 
