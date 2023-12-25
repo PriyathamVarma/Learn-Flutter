@@ -18,7 +18,7 @@ x
 Now, in the new file 
 
 ```dart
-/* This widget is a simple widget
+/* This widget is simple
    for showing a box with a
    background color and some text */
 
@@ -87,6 +87,10 @@ void main() {
 Variables are named containers that store data values for use throughout your code.
 They allow you to manage and manipulate information dynamically within your Flutter app.
 
+<details>
+
+<summary> Expand </summary>
+
 ### Types of Variables
 
 **Global Variables:** Declared outside of any class or function, accessible from anywhere in the app. Use sparingly to avoid namespace pollution.
@@ -96,6 +100,7 @@ They allow you to manage and manipulate information dynamically within your Flut
 **Instance Variables:** Declared within a class, accessible to all instances of that class.
 
 **Static Variables:** Declared within a class using the static keyword, shared among all instances of the class.
+
 
 ### Declaring Variables
 
@@ -147,11 +152,157 @@ For data that changes over time, use state management techniques:
 **Provider:** Share state across multiple widgets in a tree.
 
 **BLoC:** Separate business logic from UI for complex apps.
+   
+</details>
+
+
+## Configurable widgets
+
+Send data from parent widget to child widget
+
+> main.dart file
+
+```dart
+// This is the main dart file
+// IMPORTS
+// PACKAGES
+import 'package:flutter/material.dart';
+
+// WIDGETS
+import 'package:dice/custom_box_container.dart';
+
+/* main() function executes 
+the runApp() function 
+which renders the widgets*/
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        body: CustomBoxContainer(0xfd7272b6),
+      ),
+    ),
+  );
+}
+```
+
+> custom_box_container.dart file
+
+```dart
+/* This widget is a simple widget
+   for showing a box with a
+   background color and some text */
+
+// IMPORTS
+// PACKAGES
+import 'package:flutter/material.dart';
+
+// Widgets
+import 'package:dice/custom_text_container.dart';
+
+// Custom Widgets
+// ignore: must_be_immutable
+class CustomBoxContainer extends StatelessWidget {
+  CustomBoxContainer(this.customText, {super.key});
+
+  int customText;
+
+  @override
+  Widget build(context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(customText),
+        border: Border.all(
+          width: 8,
+        ),
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Center(
+        child: SizedBox(
+          child: CustomTextContainer("hell0"),// This is for next child widget
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+## Using Images
+
+> Create a folder called as assets
+
+> Create a subfolder called images
+
+> Upload all the required images
+
+In pubspec.yaml
+
+```yaml
+  assets:
+    - assets/images/Dice01.png
+    .... reamianing images
+```
+
+In the code
+
+```dart
+
+/* This widget is a simple widget
+   for showing a box with a
+   background color and some text */
+
+// IMPORTS
+// PACKAGES
+import 'package:flutter/material.dart';
+
+// Widgets
+import 'package:dice/custom_text_container.dart';
+
+// Custom Widgets
+// ignore: must_be_immutable
+class CustomBoxContainer extends StatelessWidget {
+  CustomBoxContainer(this.customText, {super.key});
+
+  int customText;
+
+  @override
+  Widget build(context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(customText),
+        border: Border.all(
+          width: 8,
+        ),
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Center(
+        child: SizedBox(
+          child: Column(
+            children: [
+              CustomTextContainer("hello"),
+              Image.asset('assets/images/Dice01.png'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+```
+
+
+
 
 ### Best Practices
 
-Choose appropriate variable types and scopes to ensure code readability and maintainability.
-Manage state effectively for dynamic data to create interactive and responsive Flutter apps.
+> [!IMPORTANT]
+> Choose appropriate variable types and scopes to ensure code readability and maintainability.
+
+> [!TIP]
+> Manage state effectively for dynamic data to create interactive and responsive Flutter apps.
 
 
 <hr/>
