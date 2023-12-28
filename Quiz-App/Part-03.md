@@ -116,6 +116,76 @@ class _QuestionsWidgetState extends State<QuestionsWidget> {
   }
 }
 ```
+## Question Index 
 
+```dart
+/* This is the widget for questions
+*/
+
+// Imports
+// Packages
+//import "dart:math";
+
+import "package:flutter/material.dart";
+
+// Widgets
+import 'package:quiz_app/stateless_widgets/button_widgets/elevated_button.dart';
+
+// Data
+import 'package:quiz_app/data/quiz_questions.dart';
+
+// Widget
+class QuestionsWidget extends StatefulWidget {
+  const QuestionsWidget({super.key});
+
+  @override
+  State<QuestionsWidget> createState() {
+    return _QuestionsWidgetState();
+  }
+}
+
+// The return type of DiceRoll class
+
+class _QuestionsWidgetState extends State<QuestionsWidget> {
+  // Changing the question
+  var currentQuestionIndex = 0;
+
+  // Next question method
+  void nextQuestion() {
+    setState(() {
+      if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex += 1;
+      }
+    });
+
+    debugPrint('$currentQuestionIndex');
+  }
+
+  @override
+  Widget build(context) {
+    final currentQuestion = questions[currentQuestionIndex];
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center, // Center children vertically
+      children: [
+        Center(
+          child: Text(
+            currentQuestion.question,
+            style: const TextStyle(fontSize: 24, color: Colors.white),
+          ),
+        ),
+        ...currentQuestion.options.map(
+          (item) {
+            return ElevatedButtonWidget(
+              answerText: item,
+              answerFunction: nextQuestion,
+            );
+          },
+        ).toList(),
+      ],
+    );
+  }
+}
+```
 
 [<-- Part-02.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-01.md) | [Part 04 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-03.md)
