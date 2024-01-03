@@ -1,4 +1,4 @@
-[<-- Part-04.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-04.md) | [Part-06.md -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-06.md)
+[<-- Part-04.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-04.md) 
 
 ## Results page
 
@@ -208,4 +208,4 @@ class QuestionsSummary extends StatelessWidget {
 </details>
 
 
-[<-- Part-04.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-04.md) | [Part-06.md -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-06.md)
+[<-- Part-04.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Quiz-App/Part-04.md) 
