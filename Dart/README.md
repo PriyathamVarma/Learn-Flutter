@@ -34,6 +34,7 @@ Dart's strength lies in its ability to run on multiple platforms, including web 
 | - | - | - |
 | 1 | [Basics](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dart/Basics.md) | Types |
 | 2 | [Functions](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dart/Functions.md) | Functions |
+| 3 | [OOP](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Dart/OOP.md) | OOPs |
 
 ### Resources
 
