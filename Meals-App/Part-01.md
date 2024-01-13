@@ -497,12 +497,101 @@ const dummyMeals = [
 </details>
 
 
+> screens/meals.dart
 
 
 <details>
-  <summary></summary>
+  <summary>Code</summary>
 
 ```dart
+/*  
+  This is for meals data screen
+*/
+
+// Imports
+
+import 'package:flutter/material.dart';
+import 'package:meals_app/src/models/meal.dart';
+
+class MealsScreen extends StatelessWidget {
+  const MealsScreen({
+    super.key,
+    required this.title,
+    required this.meals,
+  });
+
+  final String title;
+  final List<Meal> meals;
+
+  @override
+  Widget build(BuildContext context) {
+    Widget content = ListView.builder(
+      itemCount: 10,
+      itemBuilder: (ctx, index) => Text(meals[index].title),
+    );
+
+    // if meals data is empty
+    if (meals.isEmpty) {
+      content = const Center(
+        child: Text("No Meals data"),
+      );
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.add),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a snackbar')));
+            },
+          ),
+        ],
+      ),
+      body: content,
+    );
+  }
+}
+
+
+```
+  
+</details>
+
+
+> main.dart
+
+
+<details>
+  <summary>Code</summary>
+
+```dart
+// This is the main dart file
+// IMPORTS
+import 'package:flutter/material.dart';
+import 'package:meals_app/src/data/meal_data.dart';
+// Screens
+// import 'package:meals_app/src/ui/screens/categories.dart';
+import 'package:meals_app/src/ui/screens/meals.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: Colors.white,
+        cardColor: Colors.amberAccent,
+        // textTheme: GoogleFonts.latoTextTheme(),
+      ),
+      home: const MealsScreen(
+        title: "Test Category",
+        meals: dummyMeals,
+      ),
+    ),
+  );
+}
 
 
 ```
