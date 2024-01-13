@@ -288,26 +288,106 @@ class CategoryGridItem extends StatelessWidget {
   
 </details>
 
+# Stack Widget
+
+- Using Stack widget for stacking different widgets
+- Using transparent image for the image
 
 
+```mermaid
+
+
+
+graph TD
+
+A[lib] --> B[src]
+B --> C[ui]
+C --> D[screens]
+C --> E[common]
+C --> F[widgets]
+B --> G[models]
+B --> H[services]
+G --> I[category.dart]
+D --> J[categories.dart]
+B --> K[data]
+K --> L[category_data.dart]
+F --> M[category_grid_item.dart]
+D --> N[meals.dart]
+G --> O[meal.dart]
+K --> P[meal_data.dart]
+F --> Q[meal_item.dart]
+
+
+```
+
+> meal_item.dart
 
 <details>
   <summary>Code</summary>
 
 ```dart
+/*
+  This is for meal item
+*/
+
+import 'package:flutter/material.dart';
+import 'package:meals_app/src/models/meal.dart';
+import 'package:transparent_image/transparent_image.dart';
+
+class MealItem extends StatelessWidget {
+  const MealItem({
+    super.key,
+    required this.meal,
+  });
+
+  final Meal meal;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: InkWell(
+        onTap: () {},
+        child: Stack(
+          children: [
+            FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: NetworkImage(meal.imageUrl),
+            ),
+            Positioned(
+              // top: 20,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                color: Colors.black,
+                padding:
+                    const EdgeInsets.symmetric(vertical: 2, horizontal: 44),
+                child: Column(
+                  children: [
+                    Text(
+                      meal.title,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 ```
   
 </details>
 
 
-<details>
-  <summary>Code</summary>
-
-```dart
-
-```
-  
-</details>
+<image src="https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Images/Simulator%20Screenshot%20-%20Dice%20Test%20-%202024-01-13%20at%2017.59.53.png " width=200 height="auto"/>
 
 [<-- Part-01.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Meals-App/Part-01.md) | [Part 03 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Meals-App/Part-03.md)
