@@ -208,16 +208,6 @@ class _TabsScreenState extends State<TabsScreen> {
 
 
 
-<details>
-  <summary>Code</summary>
-
-```dart
-
-```
-  
-</details>
-
-
 
 [<-- Part-04.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Meals-App/Part-04.md) | [Part 06 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Meals-App/Part-06.md)
 
