@@ -1,4 +1,4 @@
-[Part 01 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Meals-App/Part-01.md)
+[Part 01 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Shopping-App/Part-01.md)
 
 # Shopping App
 
@@ -289,4 +289,4 @@ class SideDrawerWidget extends StatelessWidget {
 
 
 
-[Part 01 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Meals-App/Part-01.md)
+[Part 01 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Shopping-App/Part-01.md)
