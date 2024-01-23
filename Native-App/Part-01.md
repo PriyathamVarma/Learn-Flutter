@@ -1,4 +1,4 @@
-[<-- Part-01.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/Part-01.md) | [Part 03 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/Part-03.md)
+[<-- Readme](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/README.md) | [Part 02 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/Part-02.md)
 
 
 ```mermaid
@@ -120,4 +120,4 @@ class PlacesList extends StatelessWidget {
 
 
 
-[<-- Part-01.md](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/Part-01.md) | [Part 03 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/Part-03.md)
+[<-- Readme](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/README.md) | [Part 02 -->](https://github.com/PriyathamVarma/Learn-Flutter/blob/main/Native-App/Part-02.md)
