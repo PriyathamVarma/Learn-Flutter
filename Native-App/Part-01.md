@@ -159,13 +159,14 @@ class _LocationInputState extends State<LocationInput> {
   
 </details>
 
-
+## Getting user's current location
 
 
 <details>
   <summary>Code</summary>
 
 ```dart
+
 
 
 ```
