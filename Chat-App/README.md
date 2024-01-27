@@ -315,6 +315,9 @@ class _AuthScreenState extends State<AuthScreen> {
 - Install firebase CLI `curl -sL https://firebase.tools | bash`
 - `firebase login`
 - `dart pub global activate flutterfire_cli`
+- add `export PATH="$PATH":"$HOME/.pub-cache/bin"` to the .zshrc file which can be found by Terminal > `open ~/.zshrc`
+- add `flutterfire configure`
+- 
 
 
 <details>
