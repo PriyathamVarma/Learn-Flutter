@@ -264,14 +264,174 @@ class MyApp extends StatelessWidget {
 </details>
 
 
+## Adding user logout
 
-
+> chat.dart
 
 <details>
   <summary>Code</summary>
 
 
 ```dart
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+
+class ChatScreen extends StatelessWidget {
+  const ChatScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('FlutterChat'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              FirebaseAuth.instance.signOut();
+            },
+            icon: Icon(
+              Icons.exit_to_app,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+        ],
+      ),
+      body: const Center(
+        child: Text('Logged in!'),
+      ),
+    );
+  }
+}
+
+```
+  
+</details>
+
+
+# Image Uploading
+
+- We shall use `Firebase Storage` for storing files(images)
+- Go to the storage option
+- Start in production mode
+- Select location
+- Go to rules
+
+FROM
+
+```
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if firestore.get(
+//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
+
+```
+
+TO 
+
+```
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if firestore.get(
+//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+```
+
+- Publish the changes
+- add `flutter pub add firebase_storage`
+- add `flutter pub add image_picker`
+
+
+## Adding an image picker widget  
+
+- Create an `user_image_picker_widget.dart` file
+
+<details>
+  <summary>Code</summary>
+
+
+```dart
+
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+
+class UserImagePicker extends StatefulWidget {
+  const UserImagePicker({
+    super.key,
+    required this.onPickImage,
+  });
+
+  final void Function(File pickedImage) onPickImage;
+
+  @override
+  State<UserImagePicker> createState() {
+    return _UserImagePickerState();
+  }
+}
+
+class _UserImagePickerState extends State<UserImagePicker> {
+  File? _pickedImageFile;
+
+  void _pickImage() async {
+    final pickedImage = await ImagePicker().pickImage(
+      source: ImageSource.camera,
+      imageQuality: 50,
+      maxWidth: 150,
+    );
+
+    if (pickedImage == null) {
+      return;
+    }
+
+    setState(() {
+      _pickedImageFile = File(pickedImage.path);
+    });
+
+    widget.onPickImage(_pickedImageFile!);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: 40,
+          backgroundColor: Colors.grey,
+          foregroundImage:
+              _pickedImageFile != null ? FileImage(_pickedImageFile!) : null,
+        ),
+        TextButton.icon(
+          onPressed: _pickImage,
+          icon: const Icon(Icons.image),
+          label: Text(
+            'Add Image',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
 
 
 ```
@@ -280,22 +440,7 @@ class MyApp extends StatelessWidget {
 
 
 
-
-
-
-<details>
-  <summary>Code</summary>
-
-
-```dart
-
-
-```
-  
-</details>
-
-
-
+## Using the image picker package
 
 
 
