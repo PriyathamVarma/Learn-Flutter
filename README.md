@@ -8,7 +8,7 @@ Contact: priyatham002@gmail.com
 
 ```
 
-# Learn-Flutter
+# Learn Flutter
 Learning Flutter
 
 
